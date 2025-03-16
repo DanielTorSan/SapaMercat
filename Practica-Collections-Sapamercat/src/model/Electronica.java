@@ -1,24 +1,21 @@
 package model;
 
 public class Electronica extends Producte {
-	private int dies_garantia;
+	private int diesGarantia;
 
-	public Electronica(float preu, String nom, String codi, int diesg) {
+	public Electronica(float preu, String nom, String codi, int diesGarantia) {
 		super(preu, nom, codi);
-		dies_garantia = diesg;
+		this.diesGarantia = diesGarantia;
 	}
 
 	@Override
 	public float getPreu() {
 		float preu = super.getPreu();
-		return (float) (preu + preu*(dies_garantia/365)*0.1);
+		return (float) (preu + preu * (diesGarantia / 365.0) * 0.1);
 	}
-
 
 	@Override
 	public String toString() {
 		return getNom() + "," + getPreu();
 	}
-	
-
 }
