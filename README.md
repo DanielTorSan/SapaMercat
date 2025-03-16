@@ -33,8 +33,11 @@ Aquest projecte és una aplicació Java que simula un sistema de gestió de comp
 
 - **`src/exemples/`**: Conté fitxers de logs per a les excepcions.
 
-## Com Executar
+5. **Explicació de les Decisions:**
+- Uso de List: Es va escollir List per emmagatzemar productes al carret perquè és una estructura flexible que permet afegir, eliminar i recórrer elements de manera senzilla.
 
-1. Clona el repositori:
-   ```bash
-   git clone https://github.com/usuari/SAPAMERCAT.git
+- Uso de Map: Es va utilitzar Map per agrupar productes per codi de barres i calcular quantitats, ja que permet un accés eficient a les dades mitjançant claus úniques.
+
+- Excepcions personalitzades: Es van definir per gestionar errors específics del domini de l'aplicació, com límits de productes, dates incorrectes o valors negatius.
+
+- Streams i Lambda Expressions: Es van utilitzar per simplificar el codi i millorar la llegibilitat, especialment en la cerca de productes pel codi de barres.
